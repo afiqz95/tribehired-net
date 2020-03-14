@@ -26,6 +26,11 @@ namespace TribeHiredBackend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.WriteIndented = true;
+            });
             this.RegisterServices(services);
         }
 
@@ -49,7 +54,7 @@ namespace TribeHiredBackend
         {
             services.AddSingleton<PostRepository>();
             services.AddSingleton<CommentRepository>();
-            services.AddSingleton<JsonPlaceHolderAPIService>();
+            services.AddSingleton<JsonPlaceHolderApiRepository>();
         }
     }
 }

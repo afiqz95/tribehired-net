@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace TribeHiredBackend.Services
 {
-    public class JsonPlaceHolderAPIService
+    public class JsonPlaceHolderApiRepository
     {
         private readonly IConfiguration Configuration;
 
-        public JsonPlaceHolderAPIService(IConfiguration configuration)
+        public JsonPlaceHolderApiRepository(IConfiguration configuration)
         {
             this.Configuration = configuration;
         }

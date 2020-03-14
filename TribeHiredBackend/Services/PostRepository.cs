@@ -9,9 +9,9 @@ namespace TribeHiredBackend.Services
 {
     public class PostRepository
     {
-        private JsonPlaceHolderAPIService JsonPlaceHolderAPIService;
+        private JsonPlaceHolderApiRepository JsonPlaceHolderAPIService;
 
-        public PostRepository(JsonPlaceHolderAPIService JsonPlaceHolderAPIService)
+        public PostRepository(JsonPlaceHolderApiRepository JsonPlaceHolderAPIService)
         {
             this.JsonPlaceHolderAPIService = JsonPlaceHolderAPIService;
         }

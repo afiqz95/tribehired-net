@@ -50,5 +50,10 @@ namespace TribeHiredBackend.Controllers
             });
         }
 
+        [HttpGet("search-comments")]
+        public async Task<IActionResult> SearchComments([FromQuery] SearchCommentModel comment)
+        {
+            return Ok(await this.commentRepository.SearchComments(comment));
+        }
     }
 }
